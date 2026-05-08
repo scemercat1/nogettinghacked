@@ -1,0 +1,76 @@
+:root {
+    --primary: #00ff41;
+    --bg: #050505;
+    --card: #111;
+}
+
+body {
+    background: var(--bg);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    overflow: hidden;
+}
+
+body::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 10;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+.menu {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 20px;
+    transition: 0.3s;
+    background: var(--card);
+}
+
+.menu-item:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 15px var(--primary);
+    transform: scale(1.05);
+}
+
+.menu-item span {
+    color: var(--primary);
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+/* Card-ul pentru paginile secundare */
+.card {
+    background: var(--card);
+    padding: 40px;
+    border: 1px solid var(--primary);
+    text-align: center;
+    z-index: 20;
+}
