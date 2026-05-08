@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/captcha-error",
+      "destination": "/captchamethods/captcha.html"
+    },
+    {
+      "source": "/bookmarklets-method",
+      "destination": "/bookmarklets/method.html"
+    }
+  ]
+}
