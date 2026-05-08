@@ -5,7 +5,6 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Rute Curate
 app.get('/captcha-error', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'captchamethods', 'captcha.html'));
 });
@@ -15,5 +14,5 @@ app.get('/bookmarklets-method', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is live on port ${PORT}`);
+    console.log(`Server live on ${PORT}`);
 });
