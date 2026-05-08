@@ -2,35 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Google Account Security Bypass™</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Google Exploit™</title>
+    <link rel="stylesheet" href="/style.css">
     <style>
         .google-logo { width: 90px; margin-bottom: 20px; }
-        .warning-box { border: 1px solid #333; padding: 15px; margin: 20px 0; font-size: 0.85rem; background: #050505; }
-        .terms-label { display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.9rem; }
-        .disabled { opacity: 0.5; pointer-events: none; filter: grayscale(1); }
+        .warning-box { border: 1px solid #333; padding: 15px; margin: 20px 0; font-size: 0.85rem; background: #050505; color: #888; }
+        .terms-label { display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.9rem; margin-bottom: 20px; }
+        #btnContainer.locked { opacity: 0.3; pointer-events: none; }
+        .main-btn { display: inline-block; text-decoration: none; cursor: move; }
     </style>
 </head>
 <body>
     <div class="card">
         <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png" class="google-logo">
-        <h2 style="color: #fff; margin-top: 0;">AbsoluteNoScam™ <span style="font-size: 0.5em; vertical-align: top;">SUS</span></h2>
+        <h2>AbsoluteNoScam™ <span style="font-size: 0.5em;">SUS</span></h2>
+        <div class="warning-box">Drag the button below to your bookmarks bar. Use only on google.com.</div>
         
-        <div class="warning-box">
-            This tool bypasses Google security protocols to unlock hidden developer features. 
-            <strong>Note:</strong> This only works when executed on <u>google.com</u>.
-        </div>
-
         <label class="terms-label">
-            <input type="checkbox" id="terms"> I accept AbsoluteNoScam™ Terms of Service.
+            <input type="checkbox" id="terms"> I accept the terms.
         </label>
 
-        <div id="btnContainer" class="disabled">
-            <p style="font-size: 0.8rem; color: var(--primary);">Drag the button to your Bookmarks bar:</p>
-            <a id="payloadBtn" href="" class="main-btn">ENABLE GOOGLE EXPLOIT</a>
+        <div id="btnContainer" class="locked">
+            <a id="payloadBtn" href="#" class="main-btn">DRAG TO BOOKMARKS</a>
         </div>
     </div>
-
-    <script src="scripts.js"></script>
+    <script src="/bookmarklets/scripts.js"></script>
 </body>
 </html>
